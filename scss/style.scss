@@ -1,0 +1,238 @@
+/**********************************************
+****** NIKI PLYEM SITE by RODRIGO BEDMAR ******
+**********************************************/
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,600");
+// Variables Declaration
+$colors: (
+  primary: #0c4b82,
+  mywhite: #ffffff,
+  dark: #100f0f,
+  button: #26b3fc,
+  light_gray: #d8d8d8,
+  dark_gray: #4c4c4c,
+);
+
+// Makes your life easier when passing dictionary values
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+// Reset and Set
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+
+  .menu {
+      width: 35px;
+      margin: 0.4em;
+  }
+}
+
+.hide-mobile {
+  display: none;
+}
+
+/************************
+ **** ABOUT SECTION *****
+ ************************/
+
+section.about {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "title boton photo";
+
+  background-color: color(primary);
+  font-size: 40px;
+  font-weight: normal;
+  color: color(mywhite);
+
+}
+
+div.learn_more_btn {
+    grid-area: boton;
+    align-self: center;
+    bottom: 1em;
+}
+
+.about h1,
+.about h2 {
+    grid-area: title;
+  margin: 0 0.5rem;
+  text-transform: capitalize;
+}
+
+div.bg {
+    grid-area: photo;
+}
+
+/* ISSUES SECTION */
+
+.issues {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(1fr, 2);
+  grid-template-rows: repeat(1fr, 3);
+  grid-template-areas:
+    "photo1 issue1"
+    "issue2 photo2"
+    "photo3 issue3";
+
+  .photo1 {
+    grid-area: photo1;
+    display: grid;
+    justify-content: center;
+  }
+
+  .issue1 {
+    grid-area: issue1;
+  }
+
+  .issue2 {
+    grid-area: isuue2;
+  }
+
+  .photo2 {
+    grid-area: photo2;
+    display: grid;
+    justify-content: center;
+  }
+
+  .photo3 {
+    grid-area: photo3;
+    display: grid;
+    justify-content: center;
+  }
+
+  .issue3 {
+    grid-area: issue3;
+  }
+
+  img {
+    border-radius: 5%;
+    margin-top: 1rem;
+    margin-left: 1em;
+  }
+
+  h3 {
+    margin-top: 0.8rem;
+    margin-left: 0.8em;
+  }
+
+  p {
+    margin-left: 1rem;
+  }
+
+  a.button {
+    position: absolute;
+    margin: 3em 1.2 0;
+  }
+}
+
+/* DONATE SECTION */
+
+section.donate {
+  background: color(primary);
+  color: color(mywhite);
+  text-align: center;
+  padding: 1em;
+  margin-top: 1rem;
+
+  p {
+    margin-bottom: 1rem;
+  }
+}
+
+/* SIGN UP SECTION */
+
+section.sign-up {
+  text-align: center;
+}
+
+div.sign-up-form p {
+  margin: .3rem 1.5rem;
+  text-transform: capitalize;
+}
+
+input :last-of-type {
+  margin-bottom: 2rem;
+}
+
+
+/* FOOTER */
+footer {
+    background-color: color(primary);
+    color: color(mywhite);
+    text-align: center;
+}
+
+
+/******************
+ ***** BUTTON *****
+ ******************/
+.button {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 0px;
+  font-family: EBGaramond;
+  background: color(button);
+  border: 0;
+  text-transform: uppercase;
+
+  text-decoration: none;
+  color: color(mywhite);
+
+  // width: 9rem;
+  // height: 3.1rem;
+  margin: 1em;
+  padding: 1.4rem 1.5rem;
+  font-size: 18px;
+}
+
+
+/*********************
+ *** MEDIA QUERIES ***
+ *********************/
+
+@media only screen and (min-width: 999px) {
+
+    .show-desktop {
+            display: block;
+            margin: 2rem auto 13% auto;
+        }
+
+    .hide-desktop {
+        display: none;
+    }
+
+    section.sign-up {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "photo form"
+
+    }
+
+    img {
+        grid-area: photo;
+        border-radius: 5%;
+    }
+
+    div.sign-up-form {
+        grid-area: form;
+        margin: 2rem 1.5rem;
+    }
+
+
+}

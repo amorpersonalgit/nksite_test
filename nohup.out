@@ -1,1 +1,223 @@
 >>> Sass is watching for changes. Press Ctrl-C to stop.
+SignalException: SIGTERM
+  Use --trace for backtrace.
+Sass is watching for changes. Press Ctrl-C to stop.
+
+Compiled scss/style.scss to css/style.css.
+Sass is watching for changes. Press Ctrl-C to stop.
+
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Error: (primary: #0c4b82, mywhite: #ffffff, dark: #100f0f, button: #26b3fc, light_gray: #d8d8d8, dark_gray: #4c4c4c) isn't a valid CSS value.
+   ╷
+41 │     background-color: $colors(primary);
+   │                       ^^^^^^^^^^^^^^^^
+   ╵
+  scss/style.scss 41:23  root stylesheet
+
+Error: Undefined variable.
+   ╷
+41 │     background-color: $color(primary);
+   │                       ^^^^^^
+   ╵
+  scss/style.scss 41:23  root stylesheet
+
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Error: expected ";".
+   ╷
+58 │   grid-template-rows: repeat(1fr), 3);
+   │                                     ^
+   ╵
+  scss/style.scss 58:37  root stylesheet
+
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Error: Expected digit.
+    ╷
+106 │       margin-left: 1.rem;
+    │                      ^
+    ╵
+  scss/style.scss 106:22  root stylesheet
+
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Error: expected "}".
+    ╷
+218 │     }
+    │      ^
+    ╵
+  scss/style.scss 218:6  root stylesheet
+
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Sass is watching for changes. Press Ctrl-C to stop.
+
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
+Compiled scss/style.scss to css/style.css.
