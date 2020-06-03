@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nikki Plyem</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- <script src="scripts/hamburger.js"></script> -->
 </head>
 <body>
 
@@ -13,8 +14,13 @@
     <header>
         <a href="#" class="logo" alt"logo"></a>
         <nav>
-            <a href="#" class="hide-desktop"><img src="images/ham.svg" alt="toggle menu" class="menu" id="menu"></a>
-        <ul class="navbar hide-mobile show-desktop" id="nav">
+            <a href="#" class="hide-desktop">
+                <img src="images/ham.svg" alt="toggle menu" class="menu" id="menu">
+            </a>
+        <ul class="hide-mobile show-desktop" id="nav">
+            <li id="exit" class="exit-btn hide-desktop">
+                    <img src="images/exit.svg" alt="exit menu">
+            </li>
             <li><a href="#" class="link">about</a></li>
             <li><a href="#" class="link">isuues</a></li>
             <li><a href="#" class="link">volunteer</a></li>
@@ -31,10 +37,10 @@
         <h2 class="subtitle">badass babe</h2>
         </div>
         <div class="learn_more_btn">
-        <a href="#" class="button_learn_more button">learn more</a>
+        <a href="#" class="button">learn more</a>
         </div>
         <div class="bg">
-        <img src="#" alt="nikki en la playa">
+        <img src="images/image.svg" alt="nikki en la playa">
         </div>
     </section>
 
@@ -46,7 +52,8 @@
             <div class="issue isuue1">
                 <h3>issue 1</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore corporis repellendus necessitatibus aspernatur atque eos quae quas, ipsa quia quasi facere soluta! Veniam, praesentium corporis unde assumenda totam nulla quos.</p>
-                <a class="button" href="">learn more</a>
+                <a class="button hide-mobile show-desktop" href="">learn more</a>
+                <a class="link hide-desktop show-mobile" href="">learn more</a>
             </div>
         <div class="photo photo2">
             <img src="https://picsum.photos/350/300?random=1" alt="">
@@ -54,7 +61,8 @@
             <div class="issue isuue2">
                 <h3>issue 2</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, est accusamus exercitationem repellat a ad nemo fuga dicta magnam ut dolorem nisi eaque ducimus, dolore aspernatur officia cupiditate, mollitia aut.</p>
-                <a class="button" href="">learn more</a>
+                <a id="solitario" class="button hide-mobile show-desktop" href="">learn more</a>
+                <a class="link hide-desktop show-mobile" href="">learn more</a>
             </div>
                 <div class="photo photo3">
             <img src="https://picsum.photos/350/300?random=2" alt="">
@@ -62,53 +70,79 @@
             <div class="issue isuue3">
                 <h3>issue 3</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sit porro esse ex amet delectus ipsa laboriosam at aspernatur! Asperiores, officiis ullam sunt blanditiis id harum dolor ipsa quis nobis?</p>
-                <a class="button" href="">learn more</a>
+                <a class="button hide-mobile show-desktop" href="">learn more</a>
+                <a class="link hide-desktop show-mobile" href="">learn more</a>
             </div>
             </section>
 <!-- DONATE SECTION -->
     <section class="donate">
         <h3>Lorem ipsum dolor sit.</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, magni?</p>
-        <a href="#" class="button donate_button">donate</a>
+        <div class="donate_button">
+        <a href="#" class="button">donate</a>
+        </div>
     </section>
 
 <!--  SIGN UP SECTION    -->
     <section class="sign-up">
-        <img src="https://picsum.photos/300/300?random=4" alt="photo4" class="form_photo show-desktop hide-mobile">
-        <div class="sign-up-form">
+        <img  src="https://picsum.photos/450/400?random=4" alt="photo4" class="form_photo show-desktop hide-mobile">
+        <div id="form" class="sign-up-form">
             <h3>Sign up to ...</h3>
             <p class=sign-up-p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
                 excepturi maxime pariatur dolorem similique doloremque magnam
                 assumenda aliquid libero eius!</p>
-            <p>fist name</p>
+            <p class="form">fist name</p>
             <input type="text">
-            <p>last name</p>
+            <p class="form">last name</p>
             <input type="text">
-            <p>email</p>
+            <p class="form">email</p>
             <input type="text">
-            <p>phone number</p>
+            <p class="form">phone number</p>
             <input type="text">
-            <p>comment or message</p>
-            <input type="text"><br>
-            <a href="#" class="button submit_button">submit</a>
+            <p class="form">comment or message</p>
+            <input class="comment" type="text"><br>
+            <div class="submit_button">
+            <a href="#" class="button">submit</a>
+            </div>
         </div>
     </section>
     <footer>
         <div class="foot1">
             <p>P.O. Box</p>
-            <p>virginia Beach</p>
+            <p>virginia beach</p>
         </div>
         <div class="foot2">
             <h4>Nikki Plyem</h4>
-            <p>Democrat for Queen</p>
+            <p>democrat for queen</p>
         </div>
         <div class="foot3">
             <p>Tel: y8723y87</p>
         </div>
         <div class="foot4">
-            <p>She is the love of my life</p>
+            <p>she is the love of my life</p>
         </div>
     </footer>
+     <script>
+
+        // javascript gets elemants by id
+        var menu = document.getElementById('menu');
+        var nav = document.getElementById('nav');
+        var exit = document.getElementById('exit');
+
+        // On click toggle prevent default for hide-mobile class
+        menu.addEventListener('click', function(e) {
+            nav.classList.toggle('hide-mobile');
+            e.preventDefault();
+        });
+
+        // On click toggle defaults for hide-mobile
+        exit.addEventListener('click', function(e) {
+            nav.classList.toggle('hide-mobile');
+            e.preventDefault();
+        });
+
+
+    </script>
 <body>
 </html>

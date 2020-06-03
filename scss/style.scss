@@ -1,7 +1,8 @@
 /**********************************************
 ****** NIKI PLYEM SITE by RODRIGO BEDMAR ******
 **********************************************/
-@import url("https://fonts.googleapis.com/css?family=Oswald:400,600");
+// @import url("https://fonts.googleapis.com/css?family=Oswald:400,600");
+
 // Variables Declaration
 $colors: (
   primary: #0c4b82,
@@ -25,6 +26,7 @@ $colors: (
 
 body {
   font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
 }
 
 header {
@@ -42,41 +44,61 @@ header {
 }
 
 /************************
+ ******* HEADER *********
+ ************************/
+
+ul {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+
+/************************
  **** ABOUT SECTION *****
  ************************/
 
-section.about {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas:
-    "title boton photo";
+.about {
+    background-color: color(primary);
+    height: 600px;
 
-  background-color: color(primary);
-  font-size: 40px;
-  font-weight: normal;
-  color: color(mywhite);
 
+    .bg {
+        // position: absolute;
+        // justify-content: right;
+        // bottom: 556px;
+        position: relative;
+        right: 0;
+        top: 83px;
+
+        img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 2;
+        }
+    }
+
+    h1, h2 {
+        margin-left: 1rem;
+        color: color(mywhite);
+        text-transform: capitalize;
+        font-size: 4rem;
+        font-weight: 400;
+    }
+
+    div.learn_more_btn {
+        margin-top: 300px;
+        margin-left: 240px;
+        position: relative;
+        z-index: 3;
+
+    }
 }
 
-div.learn_more_btn {
-    grid-area: boton;
-    align-self: center;
-    bottom: 1em;
-}
-
-.about h1,
-.about h2 {
-    grid-area: title;
-  margin: 0 0.5rem;
-  text-transform: capitalize;
-}
-
-div.bg {
-    grid-area: photo;
-}
-
-/* ISSUES SECTION */
+/*************************
+ ***** ISSUES SECTION ****
+ *************************/
 
 .issues {
   margin: 0;
@@ -120,22 +142,29 @@ div.bg {
 
   img {
     border-radius: 5%;
-    margin-top: 1rem;
-    margin-left: 1em;
+    // margin-top: 1rem;
+    // margin-left: 1em;
+    margin: 1em;
   }
 
   h3 {
-    margin-top: 0.8rem;
+    margin-top: 0.8em;
     margin-left: 0.8em;
+    text-transform: capitalize;
   }
 
   p {
-    margin-left: 1rem;
+    margin-left: 1.3em;
+    margin-right: 1em
   }
 
   a.button {
     position: absolute;
     margin: 3em 1.2 0;
+  }
+
+  .link {
+      margin: 2em 1em auto 1.3em;
   }
 }
 
@@ -144,9 +173,23 @@ div.bg {
 section.donate {
   background: color(primary);
   color: color(mywhite);
+  display: block;
   text-align: center;
-  padding: 1em;
-  margin-top: 1rem;
+  height: 300px;
+
+  h3 {
+      margin: 2rem 3rem;
+      padding: 1.2rem;
+  }
+
+  .donate_button {
+      margin-top: 4rem;
+  }
+
+  a.button {
+      width: 150%;
+  }
+
 
   p {
     margin-bottom: 1rem;
@@ -155,31 +198,99 @@ section.donate {
 
 /* SIGN UP SECTION */
 
-section.sign-up {
-  text-align: center;
+.sign-up {
+    text-align: center;
+    margin: 1.5em 2.5em;
+    text-transform: capitalize;
+
+    input {
+        min-width: 50%;
+        height: 1.5rem;
+    }
+
+    .form {
+        text-align: left;
+        margin: .3em auto .3em 25%;
+    }
+
+    .comment {
+        height: 4em;
+    }
+
+    .submit_button {
+        margin: 2rem 15% 5rem 40%;
+    }
+
+    #form p::after {
+        content: " *";
+    }
 }
 
-div.sign-up-form p {
-  margin: .3rem 1.5rem;
-  text-transform: capitalize;
-}
 
-input :last-of-type {
-  margin-bottom: 2rem;
-}
+/************************
+ ********* FOOTER *******
+ ************************/
 
-
-/* FOOTER */
 footer {
     background-color: color(primary);
     color: color(mywhite);
     text-align: center;
+    padding: .6rem;
+    text-transform: capitalize;
+
+    div {
+        margin: .6rem;
+    }
+}
+
+
+/**************************
+ ***** HAMBURGER MENU *****
+ **************************/
+
+nav ul {
+    position: fixed;
+    width: 30%;
+    top: 0;
+    right: 0;
+    text-align: left;
+    background: lighten($color: color(primary), $amount: 8);
+    height: 100%;
+    z-index: 7;
+    padding-top: 3em;
+    text-transform: capitalize;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding: 1em 2em;
+    background-color: lighten($color: color(primary), $amount: 7);
+}
+
+nav ul li a:hover {
+    background-color: lighten($color: color(primary), $amount: 4);
+}
+
+.exit-btn {
+    margin-bottom: 1em;
+    margin-top: -1.3em;
+    text-align: right;
+    padding: 0 1.4em;
+}
+
+.exit-btn img {
+    width: 25px;
+    cursor: pointer;
 }
 
 
 /******************
  ***** BUTTON *****
  ******************/
+
 .button {
   border-top-left-radius: 16px;
   border-top-right-radius: 0px;
@@ -193,11 +304,10 @@ footer {
   text-decoration: none;
   color: color(mywhite);
 
-  // width: 9rem;
-  // height: 3.1rem;
-  margin: 1em;
-  padding: 1.4rem 1.5rem;
-  font-size: 18px;
+  margin: 2rem;
+  // padding: 1.4rem 1.5rem;
+  padding: 1.5rem 2.8rem;
+  font-size: 20px;
 }
 
 
@@ -224,7 +334,7 @@ footer {
 
     }
 
-    img {
+    .form_photo {
         grid-area: photo;
         border-radius: 5%;
     }
@@ -235,4 +345,69 @@ footer {
     }
 
 
+    /* NAV MUTATION */
+
+    nav ul {
+        // reseting properties
+        position: inherit;
+        width: auto;
+        background: none;
+        height: auto;
+        display: flex;
+        padding-top: 0;
+    }
+
+    nav ul li {
+        float: left;
+    }
+
+    nav ul li a {
+        color: black;
+        // Properties reset
+        background-color: inherit;
+        text-align: right;
+        padding: 1em 2em;
+    }
+
+    nav li:nth-of-type(4){
+        border: 5px;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 16px;
+        border-bottom-left-radius: 0px;
+    }
+
+    nav ul li a:hover {
+        background-color: inherit;
+    }
+
+    .about .bg {
+        top: 51px;
+    }
+
+
+    .about h1, .about h2 {
+        margin-left: 4rem;
+    }
+
+    .about h1 {
+        padding-top: 2rem;
+    }
+
+    .issues {
+        align-content: center;
+        justify-content: center;
+    }
+
+    .photo {
+        margin-top: 2rem;
+    }
+
+    .issue {
+        margin: auto 4rem;
+    }
+
+    #solitario {
+        margin-left: 2rem;
+    }
 }
