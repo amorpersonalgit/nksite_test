@@ -27,15 +27,26 @@ $colors: (
 body {
   font-family: "Oswald", sans-serif;
   font-size: 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fit, 6);
+  grid-template-areas:
+    "header"
+    "about"
+    "issues"
+    "donate"
+    "signup"
+    "footer";
 }
 
 header {
+  grid-area: header;
   display: flex;
   justify-content: space-between;
 
   .menu {
-      width: 35px;
-      margin: 0.4em;
+    width: 35px;
+    margin: 0.4em;
   }
 }
 
@@ -48,52 +59,50 @@ header {
  ************************/
 
 ul {
-    list-style-type: none;
-    padding: 0;
-
+  list-style-type: none;
+  padding: 0;
 }
-
 
 /************************
  **** ABOUT SECTION *****
  ************************/
 
 .about {
-    background-color: color(primary);
-    height: 600px;
+  grid-area: about;
+  background-color: color(primary);
+  height: 600px;
 
+  .bg {
+    // position: absolute;
+    // justify-content: right;
+    // bottom: 556px;
+    position: relative;
+    right: 0;
+    top: 83px;
 
-    .bg {
-        // position: absolute;
-        // justify-content: right;
-        // bottom: 556px;
-        position: relative;
-        right: 0;
-        top: 83px;
-
-        img {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            z-index: 2;
-        }
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 2;
     }
+  }
 
-    h1, h2 {
-        margin-left: 1rem;
-        color: color(mywhite);
-        text-transform: capitalize;
-        font-size: 4rem;
-        font-weight: 400;
-    }
+  h1,
+  h2 {
+    margin-left: 1rem;
+    color: color(mywhite);
+    text-transform: capitalize;
+    font-size: 4rem;
+    font-weight: 400;
+  }
 
-    div.learn_more_btn {
-        margin-top: 300px;
-        margin-left: 240px;
-        position: relative;
-        z-index: 3;
-
-    }
+  div.learn_more_btn {
+    margin-top: 300px;
+    margin-left: 240px;
+    position: relative;
+    z-index: 3;
+  }
 }
 
 /*************************
@@ -101,6 +110,7 @@ ul {
  *************************/
 
 .issues {
+  grid-area: issues;
   margin: 0;
   display: grid;
   grid-template-columns: repeat(1fr, 2);
@@ -155,7 +165,7 @@ ul {
 
   p {
     margin-left: 1.3em;
-    margin-right: 1em
+    margin-right: 1em;
   }
 
   a.button {
@@ -164,13 +174,14 @@ ul {
   }
 
   .link {
-      margin: 2em 1em auto 1.3em;
+    margin: 2em 1em auto 1.3em;
   }
 }
 
 /* DONATE SECTION */
 
 section.donate {
+  grid-area: donate;
   background: color(primary);
   color: color(mywhite);
   display: block;
@@ -178,18 +189,17 @@ section.donate {
   height: 300px;
 
   h3 {
-      margin: 2rem 3rem;
-      padding: 1.2rem;
+    margin: 2rem 3rem;
+    padding: 1.2rem;
   }
 
   .donate_button {
-      margin-top: 4rem;
+    margin-top: 4rem;
   }
 
   a.button {
-      width: 150%;
+    width: 150%;
   }
-
 
   p {
     margin-bottom: 1rem;
@@ -199,93 +209,92 @@ section.donate {
 /* SIGN UP SECTION */
 
 .sign-up {
-    text-align: center;
-    margin: 1.5em 2.5em;
-    text-transform: capitalize;
+  grid-area: signup;
+  text-align: center;
+  margin: 1.5em 2.5em;
+  text-transform: capitalize;
 
-    input {
-        min-width: 50%;
-        height: 1.5rem;
-    }
+  input {
+    min-width: 50%;
+    height: 1.5rem;
+  }
 
-    .form {
-        text-align: left;
-        margin: .3em auto .3em 25%;
-    }
+  .form {
+    text-align: left;
+    margin: 0.3em auto 0.3em 25%;
+  }
 
-    .comment {
-        height: 4em;
-    }
+  .comment {
+    height: 4em;
+  }
 
-    .submit_button {
-        margin: 2rem 15% 5rem 40%;
-    }
+  .submit_button {
+    margin: 2rem 15% 5rem 40%;
+  }
 
-    #form p::after {
-        content: " *";
-    }
+  #form p::after {
+    content: " *";
+  }
 }
-
 
 /************************
  ********* FOOTER *******
  ************************/
 
 footer {
-    background-color: color(primary);
-    color: color(mywhite);
-    text-align: center;
-    padding: .6rem;
-    text-transform: capitalize;
+  grid-area: footer;
+  background-color: color(primary);
+  color: color(mywhite);
+  text-align: center;
+  padding: 0.6rem;
+  text-transform: capitalize;
 
-    div {
-        margin: .6rem;
-    }
+  div {
+    margin: 0.6rem;
+  }
 }
-
 
 /**************************
  ***** HAMBURGER MENU *****
  **************************/
 
 nav ul {
-    position: fixed;
-    width: 30%;
-    top: 0;
-    right: 0;
-    text-align: left;
-    background: lighten($color: color(primary), $amount: 8);
-    height: 100%;
-    z-index: 7;
-    padding-top: 3em;
-    text-transform: capitalize;
+  position: fixed;
+  width: 30%;
+  top: 0;
+  right: 0;
+  text-align: left;
+  background: lighten($color: color(primary), $amount: 8);
+  height: 100%;
+  z-index: 7;
+  padding-top: 3em;
+  text-transform: capitalize;
 }
 
 nav ul li a {
-    color: black;
-    text-decoration: none;
-    display: block;
-    width: 100%;
-    padding: 1em 2em;
-    background-color: lighten($color: color(primary), $amount: 7);
+  color: black;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  padding: 1em 2em;
+  background-color: lighten($color: color(primary), $amount: 7);
 }
 
 nav ul li a:hover {
-    background-color: lighten($color: color(primary), $amount: 4);
+  background-color: lighten($color: color(primary), $amount: 4);
 }
 
 .exit-btn {
-    margin-bottom: 1em;
-    margin-top: -1.3em;
-    text-align: right;
-    padding: 0 1.4em;
+  margin-bottom: 1em;
+  margin-top: -1.3em;
+  text-align: right;
+  padding: 0 1.4em;
 }
 
 .exit-btn img {
-    width: 25px;
-    cursor: pointer;
+  width: 25px;
+  cursor: pointer;
 }
-
 
 /******************
  ***** BUTTON *****
@@ -310,104 +319,100 @@ nav ul li a:hover {
   font-size: 20px;
 }
 
-
 /*********************
  *** MEDIA QUERIES ***
  *********************/
 
 @media only screen and (min-width: 999px) {
+  .show-desktop {
+    display: block;
+    margin: 2rem auto 13% auto;
+  }
 
-    .show-desktop {
-            display: block;
-            margin: 2rem auto 13% auto;
-        }
+  .hide-desktop {
+    display: none;
+  }
 
-    .hide-desktop {
-        display: none;
-    }
+  section.sign-up {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "photo form";
+  }
 
-    section.sign-up {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-        grid-template-areas: "photo form"
+  .form_photo {
+    grid-area: photo;
+    border-radius: 5%;
+  }
 
-    }
+  div.sign-up-form {
+    grid-area: form;
+    margin: 2rem 1.5rem;
+  }
 
-    .form_photo {
-        grid-area: photo;
-        border-radius: 5%;
-    }
+  /* NAV MUTATION */
 
-    div.sign-up-form {
-        grid-area: form;
-        margin: 2rem 1.5rem;
-    }
+  nav ul {
+    // reseting properties
+    position: inherit;
+    width: auto;
+    background: none;
+    height: auto;
+    display: flex;
+    padding-top: 0;
+  }
 
+  nav ul li {
+    float: left;
+  }
 
-    /* NAV MUTATION */
+  nav ul li a {
+    color: black;
+    // Properties reset
+    background-color: inherit;
+    text-align: right;
+    padding: 1em 2em;
+  }
 
-    nav ul {
-        // reseting properties
-        position: inherit;
-        width: auto;
-        background: none;
-        height: auto;
-        display: flex;
-        padding-top: 0;
-    }
+  nav li:nth-of-type(4) {
+    border: 5px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 0px;
+  }
 
-    nav ul li {
-        float: left;
-    }
+  nav ul li a:hover {
+    background-color: inherit;
+  }
 
-    nav ul li a {
-        color: black;
-        // Properties reset
-        background-color: inherit;
-        text-align: right;
-        padding: 1em 2em;
-    }
+  .about .bg {
+    top: 51px;
+  }
 
-    nav li:nth-of-type(4){
-        border: 5px;
-        border-top-left-radius: 16px;
-        border-top-right-radius: 0px;
-        border-bottom-right-radius: 16px;
-        border-bottom-left-radius: 0px;
-    }
+  .about h1,
+  .about h2 {
+    margin-left: 4rem;
+  }
 
-    nav ul li a:hover {
-        background-color: inherit;
-    }
+  .about h1 {
+    padding-top: 2rem;
+  }
 
-    .about .bg {
-        top: 51px;
-    }
+  .issues {
+    align-content: center;
+    justify-content: center;
+  }
 
+  .photo {
+    margin-top: 2rem;
+  }
 
-    .about h1, .about h2 {
-        margin-left: 4rem;
-    }
+  .issue {
+    margin: auto 4rem;
+  }
 
-    .about h1 {
-        padding-top: 2rem;
-    }
-
-    .issues {
-        align-content: center;
-        justify-content: center;
-    }
-
-    .photo {
-        margin-top: 2rem;
-    }
-
-    .issue {
-        margin: auto 4rem;
-    }
-
-    #solitario {
-        margin-left: 2rem;
-    }
+  #solitario {
+    margin-left: 2rem;
+  }
 }
