@@ -9,6 +9,7 @@
 body {
   font-family: "Oswald", sans-serif;
   font-size: 1.2rem;
+  width: 100vw;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
