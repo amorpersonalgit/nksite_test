@@ -128,7 +128,6 @@ ul {
   margin: 2em 1em auto 1.3em;
 }
 
-/* DONATE SECTION */
 section.donate {
   grid-area: donate;
   background: #0c4b82;
@@ -151,7 +150,6 @@ section.donate p {
   margin-bottom: 1rem;
 }
 
-/* SIGN UP SECTION */
 .sign-up {
   grid-area: signup;
   text-align: center;
@@ -281,7 +279,6 @@ nav ul li a:hover {
     margin: 2rem 1.5rem;
   }
 
-  /* NAV MUTATION */
   nav ul {
     position: inherit;
     width: auto;
@@ -302,6 +299,7 @@ nav ul li a:hover {
     padding: 1em 2em;
   }
 
+  /* TODO Not working. Border arround donate button*/
   nav li:nth-of-type(4) {
     border: 5px;
     border-top-left-radius: 16px;

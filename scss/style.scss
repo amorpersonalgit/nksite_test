@@ -27,6 +27,7 @@ $colors: (
 body {
   font-family: "Oswald", sans-serif;
   font-size: 1.2rem;
+  // I think we dont need this
   width: 100vw;
   display: grid;
   grid-template-columns: 1fr;
@@ -74,9 +75,6 @@ ul {
   height: 600px;
 
   .bg {
-    // position: absolute;
-    // justify-content: right;
-    // bottom: 556px;
     position: relative;
     right: 0;
     top: 83px;
@@ -97,6 +95,9 @@ ul {
     font-size: 4rem;
     font-weight: 400;
   }
+
+
+  //* TODO Here may lay the screen problem */
 
   div.learn_more_btn {
     margin-top: 300px;
@@ -179,7 +180,7 @@ ul {
   }
 }
 
-/* DONATE SECTION */
+//* DONATE SECTION */
 
 section.donate {
   grid-area: donate;
@@ -207,7 +208,7 @@ section.donate {
   }
 }
 
-/* SIGN UP SECTION */
+//* SIGN UP SECTION */
 
 .sign-up {
   grid-area: signup;
@@ -351,7 +352,7 @@ nav ul li a:hover {
     margin: 2rem 1.5rem;
   }
 
-  /* NAV MUTATION */
+  //* NAV MUTATION */
 
   nav ul {
     // reseting properties
@@ -375,6 +376,7 @@ nav ul li a:hover {
     padding: 1em 2em;
   }
 
+  /* TODO Not working. Border arround donate button*/
   nav li:nth-of-type(4) {
     border: 5px;
     border-top-left-radius: 16px;
@@ -387,6 +389,7 @@ nav ul li a:hover {
     background-color: inherit;
   }
 
+  //* TODO looks kike this could be a problem too */
   .about .bg {
     top: 51px;
   }
