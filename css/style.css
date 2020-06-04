@@ -11,7 +11,7 @@ body {
   font-size: 1.2rem;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(auto-fit, 6);
+  grid-template-rows: auto;
   grid-template-areas: "header" "about" "issues" "donate" "signup" "footer";
 }
 
