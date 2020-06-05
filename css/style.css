@@ -185,14 +185,14 @@ section.donate p {
   content: " *";
 }
 .sign-up input {
-  min-width: 86vw;
+  min-width: 300px;
   height: 2rem;
   margin-bottom: 0.5em;
   border: 0.09rem solid #0c4b82;
   border-radius: 0.3em;
 }
 .sign-up textarea {
-  min-width: 86vw;
+  min-width: 300px;
   margin-bottom: 0.5em;
   border: 0.09rem solid #0c4b82;
   border-radius: 0.3em;
