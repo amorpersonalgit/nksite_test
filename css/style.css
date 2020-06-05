@@ -1,8 +1,9 @@
 /**********************************************
 ****** NIKI PLYEM SITE by RODRIGO BEDMAR ******
 **********************************************/
-@import url("https://fonts.googleapis.com/css?family=Oswald:400,600");
-@import url("https://fonts.googleapis.com/css?family=EBGaramond:200,300");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Oswald:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -52,7 +53,7 @@ ul {
 }
 .about .background {
   min-height: 600px;
-  
+
   /* Hack to make it work on github */
   background-image: url(/nksite_test/images/image-x.png);
   background-position: bottom right;
@@ -123,7 +124,7 @@ ul {
 .issues p {
   margin-left: 1.3em;
   margin-right: 1.1em;
-  font-family: "EBGaramond";
+  font-family: "EBGaramond", serif;
 }
 .issues a.button {
   position: absolute;
@@ -164,9 +165,11 @@ section.donate p {
   text-transform: capitalize;
 }
 .sign-up #form p {
-  font-family: "EBGaramond";
+  font-family: "EBGaramond", serif;
   font-weight: 200;
 }
+
+/* TODO not all p's with * sufix */
 .sign-up #form p::after {
   content: " *";
 }
@@ -235,7 +238,7 @@ nav ul li a:hover {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 16px;
   border-bottom-left-radius: 0px;
-  font-family: EBGaramond;
+  font-family: "EBGaramond", serif;
   background: #26b3fc;
   border: 0;
   text-transform: uppercase;
@@ -314,7 +317,7 @@ nav ul li a:hover {
   }
 
   .about h1,
-.about h2 {
+  .about h2 {
     margin-left: 4rem;
   }
 
