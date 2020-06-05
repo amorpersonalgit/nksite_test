@@ -1,6 +1,8 @@
 /**********************************************
 ****** NIKI PLYEM SITE by RODRIGO BEDMAR ******
 **********************************************/
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,600");
+@import url("https://fonts.googleapis.com/css?family=EBGaramond:200,300");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -50,7 +52,7 @@ ul {
 }
 .about .background {
   min-height: 600px;
-  background-image: url(/images/image-x.png);
+  background-image: url("/images/image-x.png");
   background-position: bottom right;
   background-origin: content-box;
   background-repeat: no-repeat;
