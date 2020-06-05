@@ -52,7 +52,7 @@ ul {
 }
 .about .background {
   min-height: 600px;
-  background-image: url("/images/image-x.png");
+  background-image: url(./images/image-x.png);
   background-position: bottom right;
   background-origin: content-box;
   background-repeat: no-repeat;
