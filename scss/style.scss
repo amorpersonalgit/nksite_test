@@ -1,9 +1,8 @@
 /**********************************************
 ****** NIKI PLYEM SITE by RODRIGO BEDMAR ******
 **********************************************/
-@import url("https://fonts.googleapis.com/css?family=Oswald:400,600");
 
-@import url("https://fonts.googleapis.com/css?family=EBGaramond:200,300");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Oswald:wght@400;500;600;700&display=swap");
 
 // Variables Declaration
 $colors: (
@@ -31,7 +30,7 @@ body {
   font-family: "Oswald", sans-serif;
   font-size: 1.3rem;
   // I think we dont need this
-  // width: 100%;
+  // width: 100vw;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
@@ -54,8 +53,9 @@ header {
   height: 10vh;
 
   .menu {
-    width: 35px;
-    margin: 0.8em 0.4em;
+    max-width: 35px;
+    height: auto;
+    margin: 0.8em 0.6em;
   }
 }
 
@@ -80,12 +80,16 @@ ul {
 
   .background {
     min-height: 600px;
-     
-    /* Hack to make it work on github */
-    background-image: url(/nksite_test/images/image-x.png);
+
+    /* path in github make it work on github */
+    // background-image: url(/nksite_test/images/image-x.png);
+    background-image: url(/images/image-x.png);
     background-position: bottom right;
     background-origin: content-box;
     background-repeat: no-repeat;
+    max-width: 100%;
+    height: auto;
+    // min-width: 50vw;
   }
 
   h1,
@@ -101,9 +105,7 @@ ul {
   //* TODO Fix button placement */
 
   div.learn_more_btn {
-    align-self: center;
-    justify-self: end;
-    margin: 1em;
+    margin: 10rem 4rem 0.5rem;
     position: relative;
     z-index: 3;
   }
@@ -116,6 +118,7 @@ ul {
 .issues {
   grid-area: issues;
   margin: 0;
+  padding: 0.3rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -123,6 +126,14 @@ ul {
     "photo1 issue1"
     "issue2 photo2"
     "photo3 issue3";
+
+  img {
+    max-width: 100%;
+    padding: 0.5em;
+    height: auto;
+    border-radius: 1em;
+    margin-top: 1.2em;
+  }
 
   .photo1 {
     grid-area: photo1;
@@ -154,14 +165,6 @@ ul {
     grid-area: issue3;
   }
 
-  img {
-      // Change radius units...
-    border-radius: 5%;
-    // margin-top: 1rem;
-    // margin-left: 1em;
-    margin: 1em;
-  }
-
   h3 {
     margin-top: 0.8em;
     margin-left: 0.8em;
@@ -172,6 +175,7 @@ ul {
     margin-left: 1.3em;
     margin-right: 1.1em;
     font-family: "EBGaramond";
+    font-size: 0.8em;
   }
 
   a.button {
@@ -212,7 +216,6 @@ section.donate {
   }
 }
 
-
 /***************************
  ***** SIGN UP SECTION *****
  ***************************/
@@ -223,43 +226,46 @@ section.donate {
   margin: 1.5em 2.5em;
   text-transform: capitalize;
 
-
-// TODO This breaks the size of the page.
-  // input {
-  //   width: 60rem;
-  //   height: 3rem;
-  //   border-color: color(primary);
-  //   border-width: 0.25rem;
-  //   border-radius: 0.4em;
-  //   margin: 0.6rem;
-  // }
-  //
-  // input:last-of-type {
-  //       height: 6rem;
-  // }
-  //
-  // .form {
-  //   text-align: left;
-  //   margin: 1rem auto 1rem 1.5rem;
-  // }
-  //
-  // .comment {
-  //   height: 4em;
-  // }
-  //
-  // .submit_button {
-  //   // margin: 2rem 15% 5rem 40%;
-  //   width: 300px;
-  //   height:180px;
-  // }
-
-  #form p {
-      font-family: "EBGaramond";
-      font-weight: 200;
+  .submit_button {
+    margin: 1.2em;
   }
 
-  #form p::after {
+  h3,
+  p:first-of-type {
+    margin: auto auto 1.1em;
+  }
+
+  p {
+    font-family: "EBGaramond";
+    font-weight: 200;
+  }
+
+  p:nth-of-type(2)::after,
+  p:nth-of-type(3)::after,
+  p:nth-of-type(4)::after,
+  p:nth-of-type(6)::after {
     content: " *";
+  }
+
+  input {
+    min-width: 86vw;
+
+    // TODO.
+    height: 2rem;
+    margin-bottom: 0.5em;
+    border: 0.09rem solid color(primary);
+    border-radius: 0.3em;
+  }
+
+  textarea {
+    min-width: 86vw;
+    margin-bottom: 0.5em;
+    border: 0.09rem solid color(primary);
+    border-radius: 0.3em;
+  }
+
+  .form {
+    text-align: left;
   }
 }
 
@@ -411,11 +417,6 @@ nav ul li a:hover {
 
   nav ul li a:hover {
     background-color: inherit;
-  }
-
-  //* TODO looks kike this could be a problem too */
-  .about .bg {
-    top: 51px;
   }
 
   .about h1,

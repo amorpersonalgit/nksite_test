@@ -2,8 +2,6 @@
 ****** NIKI PLYEM SITE by RODRIGO BEDMAR ******
 **********************************************/
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Oswald:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap");
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -29,8 +27,9 @@ header {
   height: 10vh;
 }
 header .menu {
-  width: 35px;
-  margin: 0.8em 0.4em;
+  max-width: 35px;
+  height: auto;
+  margin: 0.8em 0.6em;
 }
 
 .hide-mobile {
@@ -53,12 +52,13 @@ ul {
 }
 .about .background {
   min-height: 600px;
-
-  /* Hack to make it work on github */
-  background-image: url(/nksite_test/images/image-x.png);
+  /* path in github make it work on github */
+  background-image: url(/images/image-x.png);
   background-position: bottom right;
   background-origin: content-box;
   background-repeat: no-repeat;
+  max-width: 100%;
+  height: auto;
 }
 .about h1,
 .about h2 {
@@ -70,9 +70,7 @@ ul {
   width: 70%;
 }
 .about div.learn_more_btn {
-  align-self: center;
-  justify-self: end;
-  margin: 1em;
+  margin: 10rem 4rem 0.5rem;
   position: relative;
   z-index: 3;
 }
@@ -83,10 +81,18 @@ ul {
 .issues {
   grid-area: issues;
   margin: 0;
+  padding: 0.3rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-template-areas: "photo1 issue1" "issue2 photo2" "photo3 issue3";
+}
+.issues img {
+  max-width: 100%;
+  padding: 0.5em;
+  height: auto;
+  border-radius: 1em;
+  margin-top: 1.2em;
 }
 .issues .photo1 {
   grid-area: photo1;
@@ -112,10 +118,6 @@ ul {
 .issues .issue3 {
   grid-area: issue3;
 }
-.issues img {
-  border-radius: 5%;
-  margin: 1em;
-}
 .issues h3 {
   margin-top: 0.8em;
   margin-left: 0.8em;
@@ -124,7 +126,8 @@ ul {
 .issues p {
   margin-left: 1.3em;
   margin-right: 1.1em;
-  font-family: "EBGaramond", serif;
+  font-family: "EBGaramond";
+  font-size: 0.8em;
 }
 .issues a.button {
   position: absolute;
@@ -164,14 +167,38 @@ section.donate p {
   margin: 1.5em 2.5em;
   text-transform: capitalize;
 }
-.sign-up #form p {
-  font-family: "EBGaramond", serif;
+.sign-up .submit_button {
+  margin: 1.2em;
+}
+.sign-up h3,
+.sign-up p:first-of-type {
+  margin: auto auto 1.1em;
+}
+.sign-up p {
+  font-family: "EBGaramond";
   font-weight: 200;
 }
-
-/* TODO not all p's with * sufix */
-.sign-up #form p::after {
+.sign-up p:nth-of-type(2)::after,
+.sign-up p:nth-of-type(3)::after,
+.sign-up p:nth-of-type(4)::after,
+.sign-up p:nth-of-type(6)::after {
   content: " *";
+}
+.sign-up input {
+  min-width: 86vw;
+  height: 2rem;
+  margin-bottom: 0.5em;
+  border: 0.09rem solid #0c4b82;
+  border-radius: 0.3em;
+}
+.sign-up textarea {
+  min-width: 86vw;
+  margin-bottom: 0.5em;
+  border: 0.09rem solid #0c4b82;
+  border-radius: 0.3em;
+}
+.sign-up .form {
+  text-align: left;
 }
 
 /************************
@@ -238,7 +265,7 @@ nav ul li a:hover {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 16px;
   border-bottom-left-radius: 0px;
-  font-family: "EBGaramond", serif;
+  font-family: EBGaramond;
   background: #26b3fc;
   border: 0;
   text-transform: uppercase;
@@ -312,12 +339,8 @@ nav ul li a:hover {
     background-color: inherit;
   }
 
-  .about .bg {
-    top: 51px;
-  }
-
   .about h1,
-  .about h2 {
+.about h2 {
     margin-left: 4rem;
   }
 
