@@ -22,13 +22,14 @@ $colors: (
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: "Oswald", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   // I think we dont need this
-  width: 100vw;
+  // width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
@@ -41,24 +42,24 @@ body {
     "footer";
 }
 
+/************************
+ ******* HEADER *********
+ ************************/
 header {
   grid-area: header;
   display: flex;
   justify-content: space-between;
+  height: 10vh;
 
   .menu {
     width: 35px;
-    margin: 0.4em;
+    margin: 0.8em 0.4em;
   }
 }
 
 .hide-mobile {
   display: none;
 }
-
-/************************
- ******* HEADER *********
- ************************/
 
 ul {
   list-style-type: none;
@@ -71,20 +72,16 @@ ul {
 
 .about {
   grid-area: about;
+  display: flex;
+  flex-direction: column;
   background-color: color(primary);
-  height: 600px;
 
-  .bg {
-    position: relative;
-    right: 0;
-    top: 83px;
-
-    img {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      z-index: 2;
-    }
+  .background {
+    min-height: 600px;
+    background-image: url(/images/image-x.png);
+    background-position: bottom right;
+    background-origin: content-box;
+    background-repeat: no-repeat;
   }
 
   h1,
@@ -94,14 +91,15 @@ ul {
     text-transform: capitalize;
     font-size: 4rem;
     font-weight: 400;
+    width: 70%;
   }
 
-
-  //* TODO Here may lay the screen problem */
+  //* TODO Fix button placement */
 
   div.learn_more_btn {
-    margin-top: 300px;
-    margin-left: 240px;
+    align-self: center;
+    justify-self: end;
+    margin: 1em;
     position: relative;
     z-index: 3;
   }
@@ -115,8 +113,8 @@ ul {
   grid-area: issues;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(1fr, 2);
-  grid-template-rows: repeat(1fr, 3);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   grid-template-areas:
     "photo1 issue1"
     "issue2 photo2"
@@ -153,6 +151,7 @@ ul {
   }
 
   img {
+      // Change radius units...
     border-radius: 5%;
     // margin-top: 1rem;
     // margin-left: 1em;
@@ -167,7 +166,8 @@ ul {
 
   p {
     margin-left: 1.3em;
-    margin-right: 1em;
+    margin-right: 1.1em;
+    font-family: "EBGaramond";
   }
 
   a.button {
@@ -176,7 +176,7 @@ ul {
   }
 
   .link {
-    margin: 2em 1em auto 1.3em;
+    margin: 2em 1em 2rem 1.3em;
   }
 }
 
@@ -188,7 +188,7 @@ section.donate {
   color: color(mywhite);
   display: block;
   text-align: center;
-  height: 300px;
+  // height: 300px;
 
   h3 {
     margin: 2rem 3rem;
@@ -196,7 +196,7 @@ section.donate {
   }
 
   .donate_button {
-    margin-top: 4rem;
+    margin: 4rem auto 3rem;
   }
 
   a.button {
@@ -208,7 +208,10 @@ section.donate {
   }
 }
 
-//* SIGN UP SECTION */
+
+/***************************
+ ***** SIGN UP SECTION *****
+ ***************************/
 
 .sign-up {
   grid-area: signup;
@@ -216,22 +219,39 @@ section.donate {
   margin: 1.5em 2.5em;
   text-transform: capitalize;
 
-  input {
-    min-width: 50%;
-    height: 1.5rem;
-  }
 
-  .form {
-    text-align: left;
-    margin: 0.3em auto 0.3em 25%;
-  }
+// TODO This breaks the size of the page.
+  // input {
+  //   width: 60rem;
+  //   height: 3rem;
+  //   border-color: color(primary);
+  //   border-width: 0.25rem;
+  //   border-radius: 0.4em;
+  //   margin: 0.6rem;
+  // }
+  //
+  // input:last-of-type {
+  //       height: 6rem;
+  // }
+  //
+  // .form {
+  //   text-align: left;
+  //   margin: 1rem auto 1rem 1.5rem;
+  // }
+  //
+  // .comment {
+  //   height: 4em;
+  // }
+  //
+  // .submit_button {
+  //   // margin: 2rem 15% 5rem 40%;
+  //   width: 300px;
+  //   height:180px;
+  // }
 
-  .comment {
-    height: 4em;
-  }
-
-  .submit_button {
-    margin: 2rem 15% 5rem 40%;
+  #form p {
+      font-family: "EBGaramond";
+      font-weight: 200;
   }
 
   #form p::after {
@@ -274,7 +294,7 @@ nav ul {
 }
 
 nav ul li a {
-  color: black;
+  color: color(mywhite);
   text-decoration: none;
   display: block;
   width: 100%;
